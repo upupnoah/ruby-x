@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 a = 'hello'
 puts a.object_id
 
-a.replace('hello2')
+# a.replace('hello2')
 puts a
 puts a.object_id
 
 a = 'Hello' # 重新赋值，a的object_id改变（新的对象）
 puts a.object_id
 
-arr = ['a', 'b']
+arr = %w[a b]
 puts arr[1], arr[2] # 越界是 nil， 使用 puts 不会输出
 
 a = { "a": 1, "b": 2 } # 区别是 key 是 symbol， 定义 hash （目前的新语法）
@@ -20,7 +22,7 @@ puts a[:b] # 为 2， 因为 a 中 "b":2, 读作 a symbol b
 # ! 结尾
 str1 = 'hello'
 str2 = 'test'
-str1.capitalize! # 原地修改, 并返回结果
+# str1.capitalize! # 原地修改, 并返回结果
 puts str2.capitalize # 会返回结果，但是本身没变
 puts str1
 puts str2
